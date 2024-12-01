@@ -5,50 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plateforme E-Learning</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#cours">Cours</a></li>
-                <li><a href="#profile">Mon Profil</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <h1 class="logo">E-Learning Pro</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#cours">Cours</a></li>
+                    <li><a href="#features">Fonctionnalités</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#profile" class="btn">Mon Profil</a>
+        </div>
     </header>
 
     <main>
-        <section id="accueil">
-            <h1>Bienvenue sur notre plateforme e-learning</h1>
-            <p>Découvrez nos cours en ligne et améliorez vos compétences.</p>
-        </section>
-
-        <section id="cours">
-            <h2>Nos Cours</h2>
-            <div class="course-grid">
-                <!-- Ajoutez ici les éléments du carrousel de cours -->
+        <!-- Section Accueil -->
+        <section id="accueil" class="hero-section">
+            <div class="hero-content">
+                <h1>Apprenez à votre rythme avec <span>E-Learning Pro</span></h1>
+                <p>Rejoignez des milliers d'étudiants qui développent leurs compétences et atteignent leurs objectifs professionnels.</p>
+                <a href="#cours" class="btn">Découvrir les Cours</a>
+            </div>
+            <div class="hero-image">
+                <img src="hero-image.jpg" alt="E-Learning">
             </div>
         </section>
 
-        <section id="profile">
-            <h2>Mon Profil</h2>
-            <p>Votre profil utilisateur sera affiché ici.</p>
+        <!-- Section Fonctionnalités -->
+        <section id="features" class="features-section">
+            <h2>Pourquoi choisir notre plateforme ?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>Experts Qualifiés</h3>
+                    <p>Apprenez avec des professionnels expérimentés dans leur domaine.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-video"></i>
+                    <h3>Vidéo Cours HD</h3>
+                    <p>Accédez à des cours vidéo clairs et de haute qualité.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Certifications</h3>
+                    <p>Obtenez des certificats reconnus pour booster votre carrière.</p>
+                </div>
+            </div>
         </section>
 
-        <section id="contact">
+        <!-- Section Cours -->
+        <section id="cours" class="courses-section">
+            <h2>Explorez Nos Cours</h2>
+            <div class="course-grid">
+                <div class="course">
+                    <h3>Développement Web</h3>
+                    <p>Apprenez HTML, CSS, JavaScript et plus encore.</p>
+                    <a href="#" class="btn">Voir le cours</a>
+                </div>
+                <div class="course">
+                    <h3>Cybersécurité</h3>
+                    <p>Maîtrisez les fondamentaux de la sécurité informatique.</p>
+                    <a href="#" class="btn">Voir le cours</a>
+                </div>
+                <div class="course">
+                    <h3>Data Science</h3>
+                    <p>Analysez des données et développez vos compétences en Python.</p>
+                    <a href="#" class="btn">Voir le cours</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact" class="contact-section">
             <h2>Contactez-nous</h2>
             <form action="">
-                <input type="text" placeholder="Votre nom" required>
-                <input type="email" placeholder="Votre email" required>
+                <div class="form-group">
+                    <input type="text" placeholder="Votre nom" required>
+                    <input type="email" placeholder="Votre email" required>
+                </div>
                 <textarea placeholder="Votre message" required></textarea>
-                <button type="submit">Envoyer</button>
+                <button type="submit" class="btn">Envoyer</button>
             </form>
         </section>
     </main>
 
     <footer>
-        &copy; 2024 Plateforme E-Learning. Tous droits réservés.
+        <p>&copy; 2024 E-Learning Pro. Tous droits réservés.</p>
     </footer>
 
     <script src="script.js"></script>
