@@ -1,61 +1,87 @@
-/* Styles globaux */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    background-color: #f4f4f4;
 }
+
 header {
-    background: #0047AB;
-    color: #fff;
-    padding: 1rem 0;
+    background-color: #333;
+    color: white;
+    padding: 10px;
 }
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
 }
-.nav-links {
-    display: flex;
-    list-style: none;
+
+header nav ul li {
+    display: inline;
+    margin-right: 15px;
 }
-.nav-links li {
-    margin: 0 15px;
-}
-.nav-links a {
-    color: #fff;
+
+header nav ul li a {
+    color: white;
     text-decoration: none;
-    font-weight: bold;
 }
-.hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #f4f4f4;
-    padding: 2rem;
+
+main {
+    padding: 20px;
 }
-.hero-content {
-    max-width: 50%;
-}
-.hero-content h1 {
+
+h1, h2 {
     color: #333;
 }
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+#course-list {
+    display: flex;
     gap: 20px;
-    text-align: center;
 }
-.feature i {
-    font-size: 2rem;
-    color: #0047AB;
+
+.course-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    width: 30%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-footer {
-    text-align: center;
-    padding: 1rem 0;
-    background: #333;
-    color: #fff;
+
+button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 20px;
+    background-color: #0275d8;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #025aa5;
 }
