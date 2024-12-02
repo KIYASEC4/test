@@ -3,47 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plateforme E-Learning</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Application E-learning</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- En-tête de la page -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="create-course.html">Créer un Cours</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="accueil">
-            <h1>Bienvenue sur notre plateforme E-Learning</h1>
-            <p>Créez et suivez des cours en ligne facilement.</p>
-        </section>
-
-        <section id="cours">
-            <h2>Nos Cours</h2>
-            <div id="course-list">
-                <!-- Liste des cours disponibles -->
-                <div class="course-item">
-                    <h3>Introduction à la programmation</h3>
-                    <p>Un cours pour débutants sur les bases de la programmation.</p>
-                    <button>Voir le Cours</button>
-                </div>
-                <div class="course-item">
-                    <h3>Développement Web</h3>
-                    <p>Apprenez à créer des sites web modernes et réactifs.</p>
-                    <button>Voir le Cours</button>
+        <div class="header-content">
+            <h1>Mes Cours</h1>
+            <div class="header-options">
+                <input type="text" placeholder="Rechercher un cours...">
+                <div class="notifications">
+                    <span>7</span> <!-- Exemple de notification -->
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </header>
 
-    <footer>
-        <p>&copy; 2024 Plateforme E-Learning. Tous droits réservés.</p>
-    </footer>
+    <!-- Liste des cours -->
+    <section class="courses">
+        <!-- Carte de cours 1 -->
+        <div class="course">
+            <img src="course1-image.jpg" alt="Course Image">
+            <div class="course-details">
+                <h3><a href="course1-details.html">Comment créer un cours en ligne</a></h3>
+                <p>Description du cours : Introduction aux techniques de création de cours.</p>
+                <p><strong>Modules :</strong> 3</p>
+                <button class="btn-start">Commencer</button>
+            </div>
+        </div>
 
-    <script src="script.js"></script>
+        <!-- Carte de cours 2 -->
+        <div class="course">
+            <img src="course2-image.jpg" alt="Course Image">
+            <div class="course-details">
+                <h3><a href="course2-details.html">Apprendre le HTML et CSS</a></h3>
+                <p>Description du cours : Cours d'introduction à HTML et CSS.</p>
+                <p><strong>Modules :</strong> 5</p>
+                <button class="btn-start">Commencer</button>
+            </div>
+        </div>
+    </section>
+    
 </body>
 </html>

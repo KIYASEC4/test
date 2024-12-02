@@ -1,87 +1,124 @@
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f4f6f9;
 }
 
+/* Header */
 header {
-    background-color: #333;
+    background-color: #4CAF50;
     color: white;
-    padding: 10px;
-}
-
-header nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin-right: 15px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-main {
     padding: 20px;
 }
 
-h1, h2 {
-    color: #333;
-}
-
-#course-list {
+.header-content {
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.course-item {
-    background-color: white;
-    padding: 15px;
+h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.header-options {
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"] {
+    padding: 5px;
+    margin-right: 20px;
     border-radius: 5px;
-    width: 30%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: none;
+    width: 200px;
+}
+
+/* Courses Section */
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.course {
+    background-color: white;
+    width: 48%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.course img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.course-details {
+    padding: 15px;
+}
+
+.course-details h3 {
+    margin: 0;
+    font-size: 1.2em;
 }
 
 button {
-    background-color: #5cb85c;
+    background-color: #4CAF50;
     color: white;
     border: none;
     padding: 10px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #4cae4c;
+    background-color: #45a049;
 }
 
-form label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
+/* Course Details Section */
+.course-detail {
+    padding: 20px;
 }
 
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.course-video {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-form button {
-    margin-top: 20px;
-    background-color: #0275d8;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+.course-description,
+.course-modules,
+.course-quiz,
+.course-assignment {
+    margin-bottom: 30px;
 }
 
-form button:hover {
-    background-color: #025aa5;
+h3 {
+    color: #4CAF50;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
 }

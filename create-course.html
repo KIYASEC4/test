@@ -3,44 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Créer un Cours</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Détails du Cours - Comment créer un cours en ligne</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- En-tête -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="create-course.html">Créer un Cours</a></li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <h1>Comment créer un cours en ligne</h1>
+            <div class="header-options">
+                <input type="text" placeholder="Rechercher un sujet...">
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section id="create-course">
-            <h1>Créer un Nouveau Cours</h1>
-            <form id="course-form">
-                <label for="course-title">Titre du Cours :</label>
-                <input type="text" id="course-title" name="course-title" required>
+    <!-- Section de contenu du cours -->
+    <section class="course-detail">
+        <!-- Vidéo d'introduction -->
+        <div class="course-video">
+            <video controls>
+                <source src="course-intro.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la vidéo.
+            </video>
+        </div>
 
-                <label for="course-description">Description :</label>
-                <textarea id="course-description" name="course-description" required></textarea>
+        <!-- Description du cours -->
+        <div class="course-description">
+            <h3>Description du cours</h3>
+            <p>Ce cours vous apprendra à créer des cours en ligne interactifs, y compris l'ajout de vidéos, de quiz, et de devoirs.</p>
+        </div>
 
-                <label for="course-video">Vidéo de Présentation (URL) :</label>
-                <input type="url" id="course-video" name="course-video">
+        <!-- Modules du cours -->
+        <div class="course-modules">
+            <h3>Modules du cours</h3>
+            <ul>
+                <li><a href="#module1">Module 1 : Introduction</a></li>
+                <li><a href="#module2">Module 2 : Techniques avancées</a></li>
+                <li><a href="#module3">Module 3 : Créer un quiz interactif</a></li>
+            </ul>
+        </div>
 
-                <label for="course-content">Contenu du Cours :</label>
-                <textarea id="course-content" name="course-content" required></textarea>
+        <!-- Section de quiz -->
+        <div class="course-quiz">
+            <h3>Quiz du cours</h3>
+            <button class="btn-start">Commencer le quiz</button>
+        </div>
 
-                <button type="submit">Créer le Cours</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Plateforme E-Learning. Tous droits réservés.</p>
-    </footer>
-
-    <script src="script.js"></script>
+        <!-- Section devoir -->
+        <div class="course-assignment">
+            <h3>Devoir</h3>
+            <p>Rédigez un article de 500 mots sur l'importance de la pédagogie dans la création de cours en ligne.</p>
+            <button class="btn-start">Soumettre le devoir</button>
+        </div>
+    </section>
+    
 </body>
 </html>
