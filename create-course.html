@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un Cours</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="create-course.html">Créer un Cours</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="create-course">
+            <h1>Créer un Nouveau Cours</h1>
+            <form id="course-form">
+                <label for="course-title">Titre du Cours :</label>
+                <input type="text" id="course-title" name="course-title" required>
+
+                <label for="course-description">Description :</label>
+                <textarea id="course-description" name="course-description" required></textarea>
+
+                <label for="course-video">Vidéo de Présentation (URL) :</label>
+                <input type="url" id="course-video" name="course-video">
+
+                <label for="course-content">Contenu du Cours :</label>
+                <textarea id="course-content" name="course-content" required></textarea>
+
+                <button type="submit">Créer le Cours</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Plateforme E-Learning. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
