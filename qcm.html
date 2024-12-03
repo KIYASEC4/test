@@ -1,58 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CEHv12 Advanced Practice Quiz</title>
+    <title>QCM CEH v12</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1, h2 {
-            color: #333;
         }
         .question {
-            margin-bottom: 20px;
+            margin: 20px 0;
         }
-        .question p {
+        .question label {
             font-weight: bold;
         }
-        .options label {
-            display: block;
-            margin-left: 20px;
+        .question input {
+            margin-right: 10px;
         }
-        .submit-btn {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
+        .result {
+            font-size: 1.2em;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>CEHv12 Advanced Practice Quiz</h1>
+
+    <h1>CEH v12 Advanced Practice Quiz</h1>
+
     <form id="quizForm">
-        <!-- Section 1 -->
-        <h2>Section 1: Reconnaissance and Scanning</h2>
+        <!-- Question 1 -->
         <div class="question">
-            <p>1. What is the main difference between passive and active reconnaissance?</p>
-            <div class="options">
-                <label><input type="radio" name="q1" value="A"> A. Active reconnaissance doesn't interact directly with the target.</label>
-                <label><input type="radio" name="q1" value="B"> B. Passive reconnaissance involves network mapping and vulnerability scanning.</label>
-                <label><input type="radio" name="q1" value="C"> C. Passive reconnaissance gathers information without direct interaction.</label>
-                <label><input type="radio" name="q1" value="D"> D. Active reconnaissance can only be used internally.</label>
-            </div>
+            <label>1. What is the main difference between passive and active reconnaissance?</label><br>
+            <input type="radio" name="q1" value="A"> A. Active reconnaissance doesn't interact directly with the target.<br>
+            <input type="radio" name="q1" value="B"> B. Passive reconnaissance involves network mapping and vulnerability scanning.<br>
+            <input type="radio" name="q1" value="C"> C. Passive reconnaissance gathers information without direct interaction.<br>
+            <input type="radio" name="q1" value="D"> D. Active reconnaissance can only be used internally.<br>
         </div>
-        <!-- Ajouter les autres questions de manière similaire -->
-        <button type="submit" class="submit-btn">Submit</button>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <label>2. During a penetration test, you are attempting to identify if a web server is using SSL or TLS encryption. Which of the following tools would be most suitable?</label><br>
+            <input type="radio" name="q2" value="A"> A. Wireshark<br>
+            <input type="radio" name="q2" value="B"> B. Nmap with --script ssl-enum-ciphers<br>
+            <input type="radio" name="q2" value="C"> C. Nessus<br>
+            <input type="radio" name="q2" value="D"> D. Metasploit<br>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <label>3. Which of the following commands can reveal open SMB shares on a network?</label><br>
+            <input type="radio" name="q3" value="A"> A. net view<br>
+            <input type="radio" name="q3" value="B"> B. nbtstat -A<br>
+            <input type="radio" name="q3" value="C"> C. arp -a<br>
+            <input type="radio" name="q3" value="D"> D. nmap -sS<br>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <label>4. What HTTP method would you use to determine if a web server allows directory listing?</label><br>
+            <input type="radio" name="q4" value="A"> A. POST<br>
+            <input type="radio" name="q4" value="B"> B. GET<br>
+            <input type="radio" name="q4" value="C"> C. HEAD<br>
+            <input type="radio" name="q4" value="D"> D. OPTIONS<br>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <label>5. Which of these port scanning techniques is considered most stealthy, bypassing most firewalls and IDS systems?</label><br>
+            <input type="radio" name="q5" value="A"> A. SYN Scan<br>
+            <input type="radio" name="q5" value="B"> B. TCP Connect Scan<br>
+            <input type="radio" name="q5" value="C"> C. NULL Scan<br>
+            <input type="radio" name="q5" value="D"> D. XMAS Scan<br>
+        </div>
+
+        <button type="button" onclick="checkAnswers()">Submit Answers</button>
     </form>
+
+    <div class="result" id="result"></div>
+
     <script>
-        document.getElementById('quizForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Quiz submitted!'); // Remplacer par un traitement plus complexe si nécessaire.
-        });
+        function checkAnswers() {
+            let score = 0;
+            let totalQuestions = 5;
+            let feedback = [];
+
+            // Question 1
+            if (document.querySelector('input[name="q1"]:checked') && document.querySelector('input[name="q1"]:checked').value === 'C') {
+                score++;
+            } else {
+                feedback.push('Question 1: Correct answer is C.');
+            }
+
+            // Question 2
+            if (document.querySelector('input[name="q2"]:checked') && document.querySelector('input[name="q2"]:checked').value === 'B') {
+                score++;
+            } else {
+                feedback.push('Question 2: Correct answer is B.');
+            }
+
+            // Question 3
+            if (document.querySelector('input[name="q3"]:checked') && document.querySelector('input[name="q3"]:checked').value === 'A') {
+                score++;
+            } else {
+                feedback.push('Question 3: Correct answer is A.');
+            }
+
+            // Question 4
+            if (document.querySelector('input[name="q4"]:checked') && document.querySelector('input[name="q4"]:checked').value === 'B') {
+                score++;
+            } else {
+                feedback.push('Question 4: Correct answer is B.');
+            }
+
+            // Question 5
+            if (document.querySelector('input[name="q5"]:checked') && document.querySelector('input[name="q5"]:checked').value === 'C') {
+                score++;
+            } else {
+                feedback.push('Question 5: Correct answer is C.');
+            }
+
+            let percentage = (score / totalQuestions) * 100;
+            let resultText = `Your score is: ${score}/${totalQuestions} (${percentage}%)`;
+
+            if (feedback.length > 0) {
+                resultText += "<br><br>Feedback:<br>" + feedback.join("<br>");
+            }
+
+            document.getElementById("result").innerHTML = resultText;
+        }
     </script>
 </body>
 </html>
