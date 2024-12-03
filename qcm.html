@@ -24,6 +24,9 @@
         .button-container {
             margin-top: 20px;
         }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -43,7 +46,7 @@
         </div>
 
         <!-- Question 2 -->
-        <div class="question" id="question2" style="display: none;">
+        <div class="question hidden" id="question2">
             <label>2. During a penetration test, you are attempting to identify if a web server is using SSL or TLS encryption. Which of the following tools would be most suitable?</label><br>
             <input type="radio" name="q2" value="A"> A. Wireshark<br>
             <input type="radio" name="q2" value="B"> B. Nmap with --script ssl-enum-ciphers<br>
@@ -54,7 +57,7 @@
         </div>
 
         <!-- Question 3 -->
-        <div class="question" id="question3" style="display: none;">
+        <div class="question hidden" id="question3">
             <label>3. Which of the following commands can reveal open SMB shares on a network?</label><br>
             <input type="radio" name="q3" value="A"> A. net view<br>
             <input type="radio" name="q3" value="B"> B. nbtstat -A<br>
@@ -65,7 +68,7 @@
         </div>
 
         <!-- Question 4 -->
-        <div class="question" id="question4" style="display: none;">
+        <div class="question hidden" id="question4">
             <label>4. What HTTP method would you use to determine if a web server allows directory listing?</label><br>
             <input type="radio" name="q4" value="A"> A. POST<br>
             <input type="radio" name="q4" value="B"> B. GET<br>
@@ -76,7 +79,7 @@
         </div>
 
         <!-- Question 5 -->
-        <div class="question" id="question5" style="display: none;">
+        <div class="question hidden" id="question5">
             <label>5. Which of these port scanning techniques is considered most stealthy, bypassing most firewalls and IDS systems?</label><br>
             <input type="radio" name="q5" value="A"> A. SYN Scan<br>
             <input type="radio" name="q5" value="B"> B. TCP Connect Scan<br>
@@ -114,9 +117,9 @@
 
         function nextQuestion() {
             if (currentQuestion < 5) {
-                document.getElementById(`question${currentQuestion}`).style.display = 'none';
+                document.getElementById(`question${currentQuestion}`).classList.add('hidden');
                 currentQuestion++;
-                document.getElementById(`question${currentQuestion}`).style.display = 'block';
+                document.getElementById(`question${currentQuestion}`).classList.remove('hidden');
             } else {
                 alert("You've completed the quiz!");
             }
