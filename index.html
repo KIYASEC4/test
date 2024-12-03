@@ -5,6 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kiyasec</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 10px 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: url('background.jpg') no-repeat center center/cover;
+      color: white;
+    }
+
+    .cta {
+      background-color: #FF7F50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .cta:hover {
+      background-color: #FF5733;
+    }
+
+    .about, .qcm-section {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .qcm-section {
+      background-color: #f9f9f9;
+      border-top: 1px solid #ddd;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -21,7 +90,7 @@
     <section class="hero">
       <h1>Bienvenue chez Kiyasec</h1>
       <p>Votre passerelle vers l'excellence en cybersécurité !</p>
-      <button class="cta">Commencer Maintenant</button>
+      <a href="#" class="cta">Commencer Maintenant</a>
     </section>
 
     <section class="about">
@@ -29,14 +98,13 @@
       <p>Kiyasec est une plateforme en ligne dédiée à l'apprentissage et au perfectionnement en cybersécurité. Explorez nos cours et devenez un expert en sécurité informatique.</p>
       <a href="#" class="learn-more">En savoir plus</a>
     </section>
-  </main>
 
-  <section class="qcm-section">
-    <h2>Testez vos connaissances</h2>
-    <p>Mettez à l'épreuve vos compétences en cybersécurité avec notre QCM interactif.</p>
-    <a href="qcm.html" class="cta">Accéder au QCM</a>
-  </section>
-  
+    <section class="qcm-section">
+      <h2>Testez vos connaissances</h2>
+      <p>Mettez à l'épreuve vos compétences en cybersécurité avec notre QCM interactif.</p>
+      <a href="test/qcm.html" class="cta">Accéder au QCM</a>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2023 Kiyasec. Tous droits réservés.</p>
