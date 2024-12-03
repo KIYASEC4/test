@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEHv12 Advanced Practice Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-weight: bold;
+        }
+        .options label {
+            display: block;
+            margin-left: 20px;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>CEHv12 Advanced Practice Quiz</h1>
+    <form id="quizForm">
+        <!-- Section 1 -->
+        <h2>Section 1: Reconnaissance and Scanning</h2>
+        <div class="question">
+            <p>1. What is the main difference between passive and active reconnaissance?</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="A"> A. Active reconnaissance doesn't interact directly with the target.</label>
+                <label><input type="radio" name="q1" value="B"> B. Passive reconnaissance involves network mapping and vulnerability scanning.</label>
+                <label><input type="radio" name="q1" value="C"> C. Passive reconnaissance gathers information without direct interaction.</label>
+                <label><input type="radio" name="q1" value="D"> D. Active reconnaissance can only be used internally.</label>
+            </div>
+        </div>
+        <!-- Ajouter les autres questions de manière similaire -->
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Quiz submitted!'); // Remplacer par un traitement plus complexe si nécessaire.
+        });
+    </script>
+</body>
+</html>
